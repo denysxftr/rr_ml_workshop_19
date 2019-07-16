@@ -1,0 +1,31 @@
+from setuptools import setup
+
+setup(
+    name="workshop",
+    version="0.0.0",
+    install_requires=[],
+    packages=["app"],
+    author="szczcxzxc",
+    author_email="powpowd@gmail.com",
+    url="",
+    download_url="",
+    description="A Python module for extracting colors from images. Get a palette of any picture!",
+    long_description="",
+    license="MIT",
+    keywords="color colors palette extract image picture",
+    classifiers=[
+        "Development Status :: 5 - Production/Stable",
+        "Intended Audience :: Developers",
+        "Programming Language :: Python",
+        "Natural Language :: English",
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 2.7",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.2",
+        "Programming Language :: Python :: 3.3",
+        "Programming Language :: Python :: 3.4",
+        "Programming Language :: Python :: 3.5",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+        "Topic :: Utilities",
+    ],
+)
