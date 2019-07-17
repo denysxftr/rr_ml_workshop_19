@@ -10,9 +10,6 @@ import requests
 from io import BytesIO
 
 
-
-
-
 class ImageRecognitionService:
     def __init__(self):
         self._model = ResNet50(weights="imagenet")
