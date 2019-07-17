@@ -1,9 +1,9 @@
 import pytest
 
-from app.api import app
+from app.api import web_app
 
 
 @pytest.fixture
 def client():
-    app.config["TESTING"] = True
-    return app.test_client()
+    web_app.config["TESTING"] = True
+    return web_app.test_client()

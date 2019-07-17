@@ -21,9 +21,9 @@ class ImageRecognitionService:
     def predict(self, image_url: str, top: int) -> List[str]:
         response = requests.get(image_url)
         img = Image.open(BytesIO(response.content)).resize((224, 224))
-        x = image.img_to_array(img)
-        x = np.expand_dims(x, axis=0)
-        x = preprocess_input(x)
+        img = image.img_to_array(img)
+        img = np.expand_dims(img, axis=0)
+        img = preprocess_input(img)
         with self._graph.as_default():
-            preds = self._model.predict(x)
+            preds = self._model.predict(img)
         return [prediction[1] for prediction in decode_predictions(preds, top=top)[0]]

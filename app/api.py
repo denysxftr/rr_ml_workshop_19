@@ -4,15 +4,15 @@ from app.services.image_recognition_service import ImageRecognitionService
 
 image_recognition_service = ImageRecognitionService()
 
-app = Flask(__name__)
+web_app = Flask(__name__)
 
 
-@app.route("/api/v1/health")
+@web_app.route("/api/v1/health")
 def health():
     return jsonify({"status": "ok"})
 
 
-@app.route("/api/v1/predict")
+@web_app.route("/api/v1/predict")
 def predict():
     image_url = request.args.get("url")
     top_predictions = int(request.args.get("top"))
@@ -21,4 +21,4 @@ def predict():
 
 
 if __name__ == "__main__":
-    app.run("0.0.0.0", 8080)
+    web_app.run("0.0.0.0", 8080)
